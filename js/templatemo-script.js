@@ -28,6 +28,11 @@ $(document).ready(function () {
             $container.imagesLoaded().progress( function() {
                 $container.isotope('layout');
             });
+            // $(window).trigger('resize');
+            var currentPage = $('.tm-gallery').find('.pager.active').data('page');
+            itemsPerPage = defineItemsPerPage();
+            setPagination();
+            goToPage(currentPage);
         }  
     }
 
