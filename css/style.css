@@ -333,3 +333,67 @@ a.lightbox-close:after {
       -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       transition: all 0.3s ease 0s;
       }
+  
+      .shadow-1:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: inherit;
+        height: inherit;
+        z-index: -2;
+        box-sizing: border-box;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+      }
+      
+      .shadow-1:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: inherit;
+        height: inherit;
+        z-index: -2;
+        box-sizing: border-box;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+      }
+
+      .card {
+        position: relative;
+        height: auto;
+        background: #fcfcfc;
+        margin: 20px 40px;
+        transition: 0.4s all;
+      }
+      
+      .card.open {
+        height: 200px;
+        background: #ffffff;
+      }
+      
+      @media only screen and (min-width: 600px) {
+        .card {
+        width: 100%;
+          margin-top:20px;
+          margin-bottom:20px;
+          margin-left:auto;
+          margin-right:auto;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      
+      @media only screen and (max-device-width: 800px) and (orientation: portrait) {
+        .card {
+          margin: 12px 10px;
+        }
+      }
+
+      .ul-card{
+        color: #848586;
+        width: 600px;
+      }
